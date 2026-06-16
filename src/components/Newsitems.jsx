@@ -5,7 +5,7 @@ const Newsitems = (props) => {
 
   return (
     <div className="newsitem">
-      <div className="card">
+      <div className="card rounded-3 border-0">
         <span className=" badge rounded-pill bg-danger d-flex justify-content-end position-absolute end-0">
           {source}
         </span>
@@ -27,7 +27,7 @@ const Newsitems = (props) => {
               {new Date(date).toGMTString()}
             </small>
           </p>
-          <a href={newsurl} target="_blank" className="btn btn-sm btn-success">
+          <a href={newsurl} target="_blank" className="btn btn-success w-100 mt-3 fw-semibold rounded-pill">
             Read More
           </a>
         </div>

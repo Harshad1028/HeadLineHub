@@ -1,12 +1,15 @@
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const Nav = () => {
   return (
     <div>
-      <nav className="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
-        <div className="container-fluid">
-          <NavLink className="navbar-brand text-light" to="/">
-            HeadLineHub
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm py-1">
+        <div className="container">
+          
+          <NavLink className="navbar-brand fw-bold text-success fs-3" to="/">
+            <img src={logo} alt="logo" style={{width:"46px", height:"46px"}} />
+            HeadLine<span className="text-white">Hub</span>
           </NavLink>
           <button
             className="navbar-toggler"
@@ -20,7 +23,7 @@ const Nav = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item active">
                 <NavLink to="/" className="nav-link ">
                   Home
