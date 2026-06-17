@@ -32,10 +32,7 @@ const News = (props) => {
   }, []);
 
   const fetchMoreData = async () => {
-    // const Url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apikey}&page=${page + 1}&pageSize=${props.pagesize}`;
-
-    // હવે આપણે વેરસેલના પોતાના જ સર્વરને રિક્વેસ્ટ મોકલીશું
-const Url = `/api/news?category=${props.category}&page=${page}`;
+    const Url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apikey}&page=${page + 1}&pageSize=${props.pagesize}`;
 
     setpage(page + 1);
     let data = await fetch(Url);
@@ -76,8 +73,8 @@ const Url = `/api/news?category=${props.category}&page=${page}`;
       >
         <div className="container">
           <div className="row my-3">
-            {!loading && 
-              articles && articles.map((element, index) => {
+            {!loading &&
+              articles.map((element, index) => {
                 return (
                   <div className="col-md-4" key={`${element.url}-${index}`}>
                     <Newsitems
@@ -137,4 +134,3 @@ export default News;
             </button>
           </div> */
 }
-

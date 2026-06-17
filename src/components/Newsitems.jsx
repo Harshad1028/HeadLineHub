@@ -27,7 +27,11 @@ const Newsitems = (props) => {
               {new Date(date).toGMTString()}
             </small>
           </p>
-          <a href={newsurl} target="_blank" className="btn btn-success w-100 mt-3 fw-semibold rounded-pill">
+          <a
+            href={newsurl}
+            target="_blank"
+            className="btn btn-success w-100 mt-3 fw-semibold rounded-pill"
+          >
             Read More
           </a>
         </div>
